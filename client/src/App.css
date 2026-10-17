@@ -1,0 +1,100 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #1e1e2e;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.contenedor { width: 100%; max-width: 480px; padding: 0 16px; }
+h1 { margin-bottom: 20px; }
+
+.formulario { display: flex; gap: 8px; margin-bottom: 20px; }
+
+.formulario input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #2a2a3e;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.formulario button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #7c5cff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.formulario button:hover { background: #6a4de0; }
+
+.resumen-tareas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #d1d1e0;
+}
+
+.btn-eliminar-completadas {
+  padding: 8px 12px;
+  border: 1px solid #66516a;
+  border-radius: 8px;
+  background: #3a2c40;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-eliminar-completadas:hover:not(:disabled) { background: #543957; }
+.btn-eliminar-completadas:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.lista { list-style: none; }
+
+.tarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2a2a3e;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.tarea span { cursor: pointer; flex: 1; }
+.input-editar {
+  flex: 1;
+  min-width: 0;
+  padding: 4px 8px;
+  border: 1px solid #7c5cff;
+  border-radius: 5px;
+  background: #1e1e2e;
+  color: #fff;
+  font: inherit;
+}
+.tarea.completada span { text-decoration: line-through; opacity: 0.5; }
+
+.mensaje-error {
+  margin-bottom: 14px;
+  color: #ff9b9b;
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.estado, .vacio { text-align: center; opacity: 0.7; margin-top: 20px; }
+
+@media (max-width: 380px) {
+  .resumen-tareas { align-items: flex-start; flex-direction: column; }
+}
